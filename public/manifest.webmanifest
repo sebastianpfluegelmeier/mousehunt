@@ -1,0 +1,9 @@
+{
+  "name": "Cat & Mouse",
+  "short_name": "Cat & Mouse",
+  "start_url": "./",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#2b211c",
+  "theme_color": "#2b211c"
+}

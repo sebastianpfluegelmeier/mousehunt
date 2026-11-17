@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Cat &amp; Mouse" />
+    <meta name="theme-color" content="#2b211c" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>Cat &amp; Mouse</title>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <div id="safe-probe" aria-hidden="true"></div>
+
+    <div id="hud">
+      <div id="hud-top">
+        <div class="score">
+          <span>Cat <b id="score-cat">0</b></span>
+          <span>Mouse <b id="score-mouse">0</b></span>
+        </div>
+        <div class="hud-buttons">
+          <button id="btn-new" type="button">New maze</button>
+          <button id="btn-menu" type="button">Menu</button>
+        </div>
+      </div>
+      <button id="btn-again" class="primary" type="button" hidden>Play again</button>
+    </div>
+
+    <div id="banner" hidden>
+      <div class="box">
+        <h2 id="banner-title"></h2>
+        <p id="banner-text"></p>
+      </div>
+    </div>
+
+    <div id="menu">
+      <div class="card">
+        <h1>Cat &amp; Mouse</h1>
+        <p class="lead">
+          You guide the mouse to its hole on the far side of the maze. Your cat tries to catch it with a paw.
+          Under a bridge the mouse is safe.
+        </p>
+        <div class="opts">
+          <div class="opt">
+            <span>Controls</span>
+            <div class="seg" data-key="side">
+              <button type="button" data-v="left">Left</button>
+              <button type="button" data-v="right">Right</button>
+            </div>
+          </div>
+          <div class="opt">
+            <span>Mouse speed</span>
+            <div class="seg" data-key="speed">
+              <button type="button" data-v="0">Slow</button>
+              <button type="button" data-v="1">Normal</button>
+              <button type="button" data-v="2">Fast</button>
+            </div>
+          </div>
+          <div class="opt">
+            <span>Maze</span>
+            <div class="seg" data-key="size">
+              <button type="button" data-v="0">Small</button>
+              <button type="button" data-v="1">Medium</button>
+              <button type="button" data-v="2">Large</button>
+            </div>
+          </div>
+          <div class="opt">
+            <span>Sound</span>
+            <div class="seg" data-key="sound">
+              <button type="button" data-v="on">On</button>
+              <button type="button" data-v="off">Off</button>
+            </div>
+          </div>
+        </div>
+        <button id="btn-play" class="primary" type="button">Start</button>
+        <p class="tip">
+          On iPad: Share → Add to Home Screen runs the game without browser bars. Guided Access (Settings →
+          Accessibility) keeps the cat from leaving the app.
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
